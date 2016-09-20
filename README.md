@@ -10,9 +10,9 @@
 ```ruby
 #import "WSCityPicker.h"
 
-
 #define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
+
 
 WSCityPicker *wsPk = [[WSCityPicker alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
 [self.view addSubview:wsPk];
@@ -20,7 +20,7 @@ WSCityPicker *wsPk = [[WSCityPicker alloc]initWithFrame:CGRectMake(0, 0, kScreen
 
 [wsPk setBlock:^void(NSString *provinceStr,NSString *cityStr,NSString *districtStr){
 
-[btn setTitle:[NSString stringWithFormat:@"%@-%@-%@",provinceStr,cityStr,districtStr] forState:UIControlStateNormal];
+    [btn setTitle:[NSString stringWithFormat:@"%@-%@-%@",provinceStr,cityStr,districtStr] forState:UIControlStateNormal];
 }];
 
 
